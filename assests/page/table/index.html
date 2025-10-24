@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="زمان‌بندی کلاس‌های باشگاه ورزشی HPower - برنامه‌های متنوع بدنسازی، کراسفیت، تی آر ایکس و ایروبیک">
+    <meta name="robots" content="follow,index">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="باشگاه ورزشی HPower">
+    <meta name="keywords" content="hpower, hpowergym, باشگاه hpower, باشگاه ورزشی hpower, تی آرایکس, بدنسازی, زومبا, جامپینگ, trx, body building, zomba, کلاس ها, زمان بندی کلاس ها">
+    <title>زمان‌بندی کلاس‌ها - HPower Gym</title>
+    <link rel="shortcut icon" href="../../image/h-logo-fi.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Modern Navigation -->
+    <nav>
+        <div class="logo">
+            <a href="../../../index.html">
+                <img src="../../image/h-logo-fi.png" alt="HPower Logo">
+                <span>HPower</span>
+            </a>
+        </div>
+        
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul id="nav-menu">
+            <li><a class="a-nav" href="../../../index.html">خانه</a></li>
+            <li><a class="a-nav" href="../login/index.html">عضویت</a></li>
+            <li>
+                <a class="a-nav active" href="#">کلاس‌ها</a>
+                <ul class="dropdown">
+                    <li><a href="#">بدنسازی</a></li>
+                    <li><a href="#">کراسفیت</a></li>
+                    <li><a href="#">تی آر ایکس</a></li>
+                    <li><a href="#">ایروبیک</a></li>
+                </ul>
+            </li>
+            <li><a class="a-nav" href="../about us/indext.html">درباره ما</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="schedule-hero">
+        <div class="hero-content">
+            <h1>زمان‌بندی کلاس‌ها</h1>
+            <p>برنامه‌های متنوع ما را بررسی کنید و کلاس مورد نظر خود را انتخاب کنید</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="schedule-main">
+        <div class="container">
+            <!-- Search and Filter Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="جستجو در کلاس‌ها...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    
+                    <div class="filter-container">
+                        <select id="sportFilter" class="filter-select">
+                            <option value="all">همه ورزش‌ها</option>
+                            <option value="کراسفیت">کراسفیت</option>
+                            <option value="بدنسازی">بدنسازی</option>
+                            <option value="تی آر ایکس">تی آر ایکس</option>
+                            <option value="ایروبیک">ایروبیک</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reservations Section -->
+            <section class="reservations-section">
+                <div class="reservations-header">
+                    <h2>رزروهای شما</h2>
+                    <button id="clear-reservations" class="clear-btn">پاک کردن همه</button>
+                </div>
+                <div id="reservations-list" class="reservations-list">
+                    <ul id="reservations"></ul>
+                </div>
+            </section>
+
+            <!-- Schedule Table -->
+            <section class="schedule-section">
+                <div class="schedule-header">
+                    <h2>جدول زمان‌بندی کلاس‌ها</h2>
+                    <div class="schedule-info">
+                        <span class="info-item">
+                            <span class="info-icon">✅</span>
+                            <span>کلاس موجود</span>
+                        </span>
+                        <span class="info-item">
+                            <span class="info-icon">❌</span>
+                            <span>کلاس غیرفعال</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th class="sport-header">ورزش / روز</th>
+                                <th class="day-header">شنبه</th>
+                                <th class="day-header">یکشنبه</th>
+                                <th class="day-header">دوشنبه</th>
+                                <th class="day-header">سه‌شنبه</th>
+                                <th class="day-header">چهارشنبه</th>
+                                <th class="day-header">پنج‌شنبه</th>
+                                <th class="day-header">جمعه</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="sport-row" data-sport="کراسفیت">
+                                <td class="sport-name">کراسفیت</td>
+                                <td class="class-cell available" data-day="شنبه" data-sport="کراسفیت">
+                                    <div class="class-info">
+                                        <span class="time">18:00-19:30</span>
+                                        <span class="instructor">مربی: علی</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell unavailable"></td>
+                                <td class="class-cell available" data-day="دوشنبه" data-sport="کراسفیت">
+                                    <div class="class-info">
+                                        <span class="time">18:00-19:30</span>
+                                        <span class="instructor">مربی: علی</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="سه‌شنبه" data-sport="کراسفیت">
+                                    <div class="class-info">
+                                        <span class="time">18:00-19:30</span>
+                                        <span class="instructor">مربی: علی</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="چهارشنبه" data-sport="کراسفیت">
+                                    <div class="class-info">
+                                        <span class="time">18:00-19:30</span>
+                                        <span class="instructor">مربی: علی</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="پنج‌شنبه" data-sport="کراسفیت">
+                                    <div class="class-info">
+                                        <span class="time">18:00-19:30</span>
+                                        <span class="instructor">مربی: علی</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell unavailable"></td>
+                            </tr>
+                            
+                            <tr class="sport-row" data-sport="بدنسازی">
+                                <td class="sport-name">بدنسازی</td>
+                                <td class="class-cell available" data-day="شنبه" data-sport="بدنسازی">
+                                    <div class="class-info">
+                                        <span class="time">16:00-17:30</span>
+                                        <span class="instructor">مربی: محمد</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="یکشنبه" data-sport="بدنسازی">
+                                    <div class="class-info">
+                                        <span class="time">16:00-17:30</span>
+                                        <span class="instructor">مربی: محمد</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="دوشنبه" data-sport="بدنسازی">
+                                    <div class="class-info">
+                                        <span class="time">16:00-17:30</span>
+                                        <span class="instructor">مربی: محمد</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="سه‌شنبه" data-sport="بدنسازی">
+                                    <div class="class-info">
+                                        <span class="time">16:00-17:30</span>
+                                        <span class="instructor">مربی: محمد</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="چهارشنبه" data-sport="بدنسازی">
+                                    <div class="class-info">
+                                        <span class="time">16:00-17:30</span>
+                                        <span class="instructor">مربی: محمد</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="پنج‌شنبه" data-sport="بدنسازی">
+                                    <div class="class-info">
+                                        <span class="time">16:00-17:30</span>
+                                        <span class="instructor">مربی: محمد</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="جمعه" data-sport="بدنسازی">
+                                    <div class="class-info">
+                                        <span class="time">16:00-17:30</span>
+                                        <span class="instructor">مربی: محمد</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr class="sport-row" data-sport="تی آر ایکس">
+                                <td class="sport-name">تی آر ایکس</td>
+                                <td class="class-cell available" data-day="شنبه" data-sport="تی آر ایکس">
+                                    <div class="class-info">
+                                        <span class="time">19:30-20:30</span>
+                                        <span class="instructor">مربی: احمد</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="یکشنبه" data-sport="تی آر ایکس">
+                                    <div class="class-info">
+                                        <span class="time">19:30-20:30</span>
+                                        <span class="instructor">مربی: احمد</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="دوشنبه" data-sport="تی آر ایکس">
+                                    <div class="class-info">
+                                        <span class="time">19:30-20:30</span>
+                                        <span class="instructor">مربی: احمد</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="سه‌شنبه" data-sport="تی آر ایکس">
+                                    <div class="class-info">
+                                        <span class="time">19:30-20:30</span>
+                                        <span class="instructor">مربی: احمد</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="چهارشنبه" data-sport="تی آر ایکس">
+                                    <div class="class-info">
+                                        <span class="time">19:30-20:30</span>
+                                        <span class="instructor">مربی: احمد</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell unavailable"></td>
+                                <td class="class-cell unavailable"></td>
+                            </tr>
+                            
+                            <tr class="sport-row" data-sport="ایروبیک">
+                                <td class="sport-name">ایروبیک</td>
+                                <td class="class-cell available" data-day="شنبه" data-sport="ایروبیک">
+                                    <div class="class-info">
+                                        <span class="time">17:00-18:00</span>
+                                        <span class="instructor">مربی: فاطمه</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell unavailable"></td>
+                                <td class="class-cell available" data-day="دوشنبه" data-sport="ایروبیک">
+                                    <div class="class-info">
+                                        <span class="time">17:00-18:00</span>
+                                        <span class="instructor">مربی: فاطمه</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="سه‌شنبه" data-sport="ایروبیک">
+                                    <div class="class-info">
+                                        <span class="time">17:00-18:00</span>
+                                        <span class="instructor">مربی: فاطمه</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell unavailable"></td>
+                                <td class="class-cell available" data-day="پنج‌شنبه" data-sport="ایروبیک">
+                                    <div class="class-info">
+                                        <span class="time">17:00-18:00</span>
+                                        <span class="instructor">مربی: فاطمه</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                                <td class="class-cell available" data-day="جمعه" data-sport="ایروبیک">
+                                    <div class="class-info">
+                                        <span class="time">17:00-18:00</span>
+                                        <span class="instructor">مربی: فاطمه</span>
+                                        <button class="reserve-btn">رزرو</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>درباره ما</h3>
+                <p>با برنامه‌های بی‌نظیر ما یک قدم به سوی پیشرفت و سلامتی بردارید. بیایید تا با هم به بدن ایده‌آل خود برسیم.</p>
+            </div>
+            <div>
+                <h3>لینک‌های مفید</h3>
+                <a href="../../../index.html">خانه</a>
+                <a href="../login/index.html">عضویت</a>
+                <a href="../table/index.html">کلاس‌ها</a>
+                <a href="../about us/indext.html">درباره ما</a>
+            </div>
+            <div>
+                <h3>ارتباط با ما</h3>
+                <address>
+                    قزوین - خیابان ولیعصر<br>
+                    جهاد دانشگاهی
+                </address>
+                <p>تلفن: 028-3345-6789</p>
+            </div>
+            <div>
+                <h3>ارسال نظرات</h3>
+                <textarea placeholder="نظرات و پیشنهادات خود را بنویسید..."></textarea>
+                <button class="btn btn-border-3">ارسال</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./table.js"></script>
+</body>
+</html>

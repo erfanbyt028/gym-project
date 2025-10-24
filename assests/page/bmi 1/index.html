@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="محاسبه BMI - شاخص توده بدنی در باشگاه ورزشی HPower. محاسبه دقیق وزن ایده‌آل و راهنمای تناسب اندام">
+    <meta name="robots" content="follow,index">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="باشگاه ورزشی HPower">
+    <meta name="keywords" content="hpower, hpowergym, باشگاه hpower, باشگاه ورزشی hpower, تی آرایکس, بدنسازی, زومبا, جامپینگ, trx, body building, zomba, bmi, بی ام آی, وزن, اضافه وزن, چاقی, توده بدنی">
+    <title>محاسبه BMI - HPower Gym</title>
+    <link rel="shortcut icon" href="../../image/h-logo-fi.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Modern Navigation -->
+    <nav>
+        <div class="logo">
+            <a href="../../../index.html">
+                <img src="../../image/h-logo-fi.png" alt="HPower Logo">
+                <span>HPower</span>
+            </a>
+        </div>
+        
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul id="nav-menu">
+            <li><a class="a-nav" href="../../../index.html">خانه</a></li>
+            <li><a class="a-nav" href="../login/index.html">عضویت</a></li>
+            <li>
+                <a class="a-nav" href="../table/index.html">کلاس‌ها</a>
+                <ul class="dropdown">
+                    <li><a href="#">بدنسازی</a></li>
+                    <li><a href="#">کراسفیت</a></li>
+                    <li><a href="#">تی آر ایکس</a></li>
+                    <li><a href="#">ایروبیک</a></li>
+                </ul>
+            </li>
+            <li><a class="a-nav" href="../about us/indext.html">درباره ما</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bmi-hero">
+        <div class="hero-content">
+            <h1>محاسبه BMI</h1>
+            <p>شاخص توده بدنی خود را محاسبه کنید و به تناسب اندام برسید</p>
+        </div>
+    </header>
+
+    <!-- BMI Calculator -->
+    <main class="bmi-main">
+        <div class="container">
+            <div class="bmi-calculator">
+                <!-- Calculator Header -->
+                <div class="calculator-header">
+                    <h2>محاسبه‌گر BMI</h2>
+                    <p>اطلاعات خود را وارد کنید تا BMI شما محاسبه شود</p>
+                </div>
+
+                <!-- Calculator Form -->
+                <div class="calculator-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="gender">جنسیت</label>
+                            <div class="gender-selector">
+                                <input type="radio" id="male" name="gender" value="male" checked>
+                                <label for="male" class="gender-option">
+                                    <span class="gender-icon">👨</span>
+                                    <span>مرد</span>
+                                </label>
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female" class="gender-option">
+                                    <span class="gender-icon">👩</span>
+                                    <span>زن</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="age">سن</label>
+                            <div class="input-container">
+                                <input type="number" id="age" min="15" max="70" placeholder="سن خود را وارد کنید" required>
+                                <span class="input-unit">سال</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="height">قد</label>
+                            <div class="input-container">
+                                <input type="number" id="height" min="50" max="200" step="0.5" placeholder="قد خود را وارد کنید" required>
+                                <span class="input-unit">سانتی‌متر</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="weight">وزن</label>
+                            <div class="input-container">
+                                <input type="number" id="weight" min="1" max="250" step="0.5" placeholder="وزن خود را وارد کنید" required>
+                                <span class="input-unit">کیلوگرم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="calculate-btn" class="calculate-btn">
+                        <span>محاسبه BMI</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Results Section -->
+                <div class="results-section" id="results-section">
+                    <div class="result-display">
+                        <div class="bmi-value">
+                            <span class="bmi-number" id="bmi-number">--</span>
+                            <span class="bmi-label">BMI</span>
+                        </div>
+                        <div class="bmi-status" id="bmi-status">
+                            <span class="status-text">وضعیت شما</span>
+                        </div>
+                    </div>
+
+                    <div class="bmi-chart">
+                        <div class="chart-container">
+                            <div class="chart-bar">
+                                <div class="bar-segment underweight" data-range="0-18.5">
+                                    <span class="range-label">کمبود وزن</span>
+                                    <span class="range-value">18.5-</span>
+                                </div>
+                                <div class="bar-segment normal" data-range="18.5-24.9">
+                                    <span class="range-label">نرمال</span>
+                                    <span class="range-value">18.5-24.9</span>
+                                </div>
+                                <div class="bar-segment overweight" data-range="25-29.9">
+                                    <span class="range-label">اضافه وزن</span>
+                                    <span class="range-value">25-29.9</span>
+                                </div>
+                                <div class="bar-segment obese" data-range="30+">
+                                    <span class="range-label">چاقی</span>
+                                    <span class="range-value">30+</span>
+                                </div>
+                            </div>
+                            <div class="chart-indicator" id="chart-indicator"></div>
+                        </div>
+                    </div>
+
+                    <div class="recommendations" id="recommendations">
+                        <h3>توصیه‌های ما</h3>
+                        <div class="recommendation-content">
+                            <p>برای دریافت توصیه‌های شخصی‌سازی شده، ابتدا BMI خود را محاسبه کنید.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BMI Information -->
+            <div class="bmi-info">
+                <div class="info-card">
+                    <div class="info-icon">📊</div>
+                    <h3>BMI چیست؟</h3>
+                    <p>شاخص توده بدنی (BMI) یک معیار ساده برای ارزیابی وزن نسبت به قد است که برای تشخیص اضافه وزن یا کمبود وزن استفاده می‌شود.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🎯</div>
+                    <h3>چرا مهم است؟</h3>
+                    <p>BMI به شما کمک می‌کند تا وضعیت سلامتی خود را بهتر درک کنید و برنامه‌های ورزشی مناسب را انتخاب کنید.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">💪</div>
+                    <h3>نحوه بهبود</h3>
+                    <p>با برنامه‌های ورزشی متنوع ما، می‌توانید به BMI ایده‌آل برسید و سلامتی خود را بهبود بخشید.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>درباره ما</h3>
+                <p>با برنامه‌های بی‌نظیر ما یک قدم به سوی پیشرفت و سلامتی بردارید. بیایید تا با هم به بدن ایده‌آل خود برسیم.</p>
+            </div>
+            <div>
+                <h3>لینک‌های مفید</h3>
+                <a href="../../../index.html">خانه</a>
+                <a href="../login/index.html">عضویت</a>
+                <a href="../table/index.html">کلاس‌ها</a>
+                <a href="../about us/indext.html">درباره ما</a>
+            </div>
+            <div>
+                <h3>ارتباط با ما</h3>
+                <address>
+                    قزوین - خیابان ولیعصر<br>
+                    جهاد دانشگاهی
+                </address>
+                <p>تلفن: 028-3345-6789</p>
+            </div>
+            <div>
+                <h3>ارسال نظرات</h3>
+                <textarea placeholder="نظرات و پیشنهادات خود را بنویسید..."></textarea>
+                <button class="btn btn-border-3">ارسال</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
